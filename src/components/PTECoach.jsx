@@ -9,6 +9,7 @@ import {
   SUPPORT_TEMPLATES,
   SUPER_CATEGORIES
 } from "../data/pteData";
+import MasterTemplates from "./Mastertemplates ";
 
 export default function PTECoach() {
   const [tab, setTab] = useState("practice");
@@ -110,6 +111,8 @@ export default function PTECoach() {
     { id: "practice", label: "Essay practice" },
     { id: "guide", label: "Structure guide" },
     { id: "phrases", label: "Golden phrases" },
+    { id: "templates", label: "Master templates" }
+
   ];
 
   return (
@@ -505,6 +508,8 @@ export default function PTECoach() {
           )}
         </div>
       )}
+      // Add to tab rendering:
+{tab === "templates" && <MasterTemplates />}
     </div>
   );
 }
